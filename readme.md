@@ -162,6 +162,30 @@ management.info.env.enabled=true
 - Add Spring Security to project and endpoints are secured :-)
 
 
+### How to add Custom Application Properties
+
+- Define those properties in application.properties file
+- use those properties in your application/ controller
+
+Code snippet for Custom Application Properties
+```java
+    // inject properties for: coach.name and team.name
+
+    @Value("${coach.name}")
+    private String coachName;
+
+    @Value("${team.name}")
+    private String teamName;
+
+    // expose a new endpoint for "teaminfo"
+
+    @GetMapping("/teaminfo")
+    public String getTeamInfo() {
+        return "Coach: " + coachName + ", Team: " + teamName;
+    }
+```
+
+ 
 
 
 
