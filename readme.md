@@ -130,6 +130,36 @@ public class FunRestController {
 - mvwn allows you to run a Maven project, No need to have Maven installed or present on your path
 - If correct version of Maven is NOT found on your computer it automatically downloads correct version and runs Maven.
 
+## 7. Spring Boot Actuators
+
+### Problem
+- How can i monitor and manage my application?
+- How can i check the application health?
+- How can i access application metrics?
+
+### Solution: Spring Boot Actuators
+
+- Exposes ednpoints to monitor and manage your application
+- You easily get Devops functionality out-of-the-box
+- Simply add the dependency to your POM file
+- REST endpoints are automatically added to your application
+
+### Exposing Endpoints
+
+- By default, only /health is exposed
+- The /info endpoint can provide information about your application
+- To expose /info
+
+Code Snippet for exposing endpoints
+```
+management.endpoints.web.exposure.include=health,info
+management.info.env.enabled=true
+```
+
+### What about Security?
+
+- You may not want to expose all of this information
+- Add Spring Security to project and endpoints are secured :-)
 
 
 
