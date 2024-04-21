@@ -70,4 +70,68 @@ public class FunRestController {
         return "Hello World!";
     }
 }
+```
+
+## 4. Spring Framework overview
+
+- Lightweight development with Java POJOs(Plain-Old-Java-Objects)
+- Dependency injection to promote loose coupling
+- Minimize boilerplate java code
+
+### Various Sections in Spring Framework
+
+- Core Container :- Factory for creating beans, Manage bean dependencies
+- Infrastructure :- AOP(Aspect Oriented Programming) Add functionality to objects declaratively Logging, Security, transactions, etc..
+- Data Access Layer :- JDBC helper classes Reduce your JDBC code by 50%. Also provides Object to relational mapping Integration with Hibernate and JPA.
+- Web Layer :- All web related classes Home of the Spring MVC framework.
+- Test Layer :- Supports Test-Driven-Development(TDD) Mock objects and out-of-container testing.
+
+## 5. [Spring Projects](https://spring.io/projects)
+
+- Additional Spring modules build-on top of the core Spring Framework
+- Only use what you need...
+   1. Spring Cloud, Spring Data, Spring Batch, Spring Security, Spring Web Services, Spring LDAP, etc..
+
+## 6. What is Maven?
+
+- Maven is a Project Management tool
+- Most popular use of Maven is for build management and dependencies
+
+### What Problems Does Maven Solve?
+
+- When building your Java Project, you may need additional JAR files for example: Spring, Hibernate, Commons Logging, JSON, etc...
+- One approach is to download the JAR files from each project website & Mmanually add the JAR files to your build path/ classpath
+
+### Maven Solution
+
+- Tell Maven the projects you are working with(dependencies) Spring, Hibernate, etc
+- Maven will go out and download the JAR files for those projects for you and maven will make those JAR files available during compile/ runtime
+- Think of Maven as your friendly helper/ personal shopper :-)
+
+### How Maven works?
+
+- First Maven reads the config file and checks if the Maven local repository does not have those files It will look for those files inside the Maven Central Repository(Remote)
+- Then it will save versions of those files in your local repository and then it will use that to build and run.
+- Maven also handle JAR dependencies. It will also download the supporting dependencies.
+
+### Maven Directory Structure
+<img src="src/webapp/img.png" width="400" height="250">
+
+### Maven key concepts
+
+- POM File (pom.xml) :- Project Object Model file which acts as a shopping list for us.
+- It has three parts :-
+  1. project meta data :- Project name, version, etc Output file type: JAR, WAR,...
+  2. dependencies :- List of projects we depend on Spring, Hibernate, etc...
+  3. plugins :- Additional custom tasks to run: generate Junit test reports etc...
+
+### Maven Wrapper files
+
+- mvwn allows you to run a Maven project, No need to have Maven installed or present on your path
+- If correct version of Maven is NOT found on your computer it automatically downloads correct version and runs Maven.
+
+
+
+
+
 
