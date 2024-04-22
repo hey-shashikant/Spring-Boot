@@ -284,6 +284,18 @@ NOTE: Defauult Scope in Spring is Singleton
 
 <img src="src/webapp/img_2.png" width="600" height="450">
 
+### Bean Lifecycle
+
+<img src="src/webapp/img_3.png" width="600" height="450">
+
+### Development Process
+
+- Define your methods for init and destroy
+- Add annotations: @PostConstruct and @PreDestroy
+
+NOTE: Prototype Beans and Lazy Initialization - Prototype beans are lazy by default. There is no need to use the @Lazy annotation for prototype scopes beans
+
+
 
 
 
