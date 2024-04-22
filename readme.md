@@ -295,6 +295,16 @@ NOTE: Defauult Scope in Spring is Singleton
 
 NOTE: Prototype Beans and Lazy Initialization - Prototype beans are lazy by default. There is no need to use the @Lazy annotation for prototype scopes beans
 
+### Java Config Bean
+
+- We will not be using @Controller this time instead we will be doing it using java code
+
+### Development Process
+
+- Create @Configuration class
+- Define @Bean method to configure the beam
+- Inject the beam into our controller
+
 
 
 
