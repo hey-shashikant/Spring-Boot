@@ -265,7 +265,25 @@ When we inject dependencies by calling setter methods of your class.
 
 - If you have a web related components like @RestController, not created until requested
 - May not discover configuration issues until too late
-- Need to make sure you have enough memory for all the beans once created
+- Need to make sure you have enough memory for all the beans once created\
+
+
+### Bean Scopes
+
+- Scope refers to the lifecycle of a bean
+- How long does the bean live?
+- How many instances are created?
+- How is the bean shared?
+
+NOTE: Defauult Scope in Spring is Singleton
+
+### What is Singleton?
+- Spring Container creates only one instance of the bean, by default
+- It is cached in memory
+- All dependency injections for the bean will reference the SAME bean.
+
+<img src="src/webapp/img_2.png" width="600" height="450">
+
 
 
 
