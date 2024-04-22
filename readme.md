@@ -241,6 +241,33 @@ When we inject dependencies by calling setter methods of your class.
 - To solve this problem Be Specific & use @Qualifier
 - Use the same name as class just first character lower-case
 
+### Alternate Solution to the above problem
+
+- Use @Primary annotations which will return primary coach
+- When using @Primary, can have only one for multiple implementations
+- If you mark multiple classes as primary we have a problem
+- You can use Qualifier and @Primary together but Qualifier will have higher priority
+
+### Lazy Initilization
+
+- Instead of creating all the beans up-front, we can specify lazy initialization
+- A bean will only be initialized in the following cases:
+  1. It is needed for dependency injection
+  2. Or it is explicitly requested
+- To configure other beans for lazy initialization we would need to add @Lazy to each class
+
+### Advantages
+
+- Only create objects as needed
+- May help with faster startup time if you have large number of components
+
+### Disadvantages
+
+- If you have a web related components like @RestController, not created until requested
+- May not discover configuration issues until too late
+- Need to make sure you have enough memory for all the beans once created
+
+
 
 
 
