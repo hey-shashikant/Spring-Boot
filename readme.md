@@ -216,6 +216,20 @@ We can achieve Inversion of Control through various mechanisms such as: Strategy
 
 NOTE : When we mark a class with the @Component annotation it marks the class as a Spring Bean and makes it a candidate for dependency injection. Spring Bean is just a regular java class that is managed by Spring
 
+### Component Scanning
+
+- Spring will scan your java classes for special annotations eg. @Component, etc and it will automatically register the beans in the Spring Container.
+- Spring Boot does auto scanning for all the packages that fall under the parent package. 
+- If you want spring to scan other packages you need to add them.
+
+### Setter Injection
+When we inject dependencies by calling setter methods of your class.
+
+### Development Process - Setter Injection
+
+- Create setter method in your class for injections
+- Configure the dependency injection with @Autowired Annotation
+
 
 
  

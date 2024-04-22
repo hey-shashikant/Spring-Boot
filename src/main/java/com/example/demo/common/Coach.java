@@ -1,4 +1,4 @@
-package com.example.demo.rest;
+package com.example.demo.common;
 
 public interface Coach {
 
