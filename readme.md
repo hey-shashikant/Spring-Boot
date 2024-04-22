@@ -230,6 +230,20 @@ When we inject dependencies by calling setter methods of your class.
 - Create setter method in your class for injections
 - Configure the dependency injection with @Autowired Annotation
 
+### Annotations Autowiring & Qualifiers
+
+### Autowiring
+
+- Injecting a demo Coach interface
+- Spring will scan @Components
+- Any one implements Coach interface???
+- If so Let's inject them..... but which one???
+- To solve this problem Be Specific & use @Qualifier
+- Use the same name as class just first character lower-case
+
+
+
+
 
 
  
