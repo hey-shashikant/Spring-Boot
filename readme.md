@@ -185,6 +185,39 @@ Code snippet for Custom Application Properties
     }
 ```
 
+## 8. Inversion of Control(IoC)
+
+It is the approach of outsourcing the construction and management of objects.
+We can achieve Inversion of Control through various mechanisms such as: Strategy design pattern, Service Locator pattern, Factory pattern, and Dependency Injection (DI).
+
+### Dependency Injection
+
+- The dependency inversion principle : The client delegates to another object the responsibility of providing its dependencies.
+- Dependency Injection (DI) is a design pattern commonly used in software development, and Spring Framework is a popular Java framework that provides comprehensive support for DI. In Spring, DI is primarily implemented through inversion of control (IoC), where the control of object creation and wiring is shifted from the application code to the Spring container.
+- There are two types of Injections :-
+  1. Constructor Injection - use this when you have required dependencies
+  2. Setter Injection - use this when you have optional dependencies
+
+### What is Spring AutoWiring?
+
+- For dependency injection, Spring can use autowiring
+- Spring will look for a class that matches and will automatically inject it...hence it is autowired.
+
+### Example Application for Dependency Injection
+
+<img src="src/webapp/img_1.png" width="850" height="180">
+
+### Development Process - Constructor Injection
+
+- Define the dependency interface & class
+- Create Demo REST Controller
+- Create a constructor in your class for injections
+- Add @GetMapping for /dailyworkout
+
+NOTE : When we mark a class with the @Component annotation it marks the class as a Spring Bean and makes it a candidate for dependency injection. Spring Bean is just a regular java class that is managed by Spring
+
+
+
  
 
 
