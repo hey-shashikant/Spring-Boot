@@ -305,6 +305,90 @@ NOTE: Prototype Beans and Lazy Initialization - Prototype beans are lazy by defa
 - Define @Bean method to configure the beam
 - Inject the beam into our controller
 
+## Hibernate
+
+- What is Hibernate
+- Benefits of Hibernate
+- What is JPA
+- Benefits of JPA
+
+### What is Hibernate?
+A framework for persisting/saving Java objects in a database
+
+### Benefits of Hibernate
+
+- Hibernate handles all the low-level SQL
+- Minimizes the amount of JDBC code you have to develop
+- Hibernate provides the Object-to-Relational Mapping(ORM)
+
+### Object-To-Relational Mapping(ORM)
+The developer define mapping between Java class and database table
+
+### What is JPA?
+
+Jakarta Persistence API(JPA)...previously known as Java persistence API. It is a standard API for Object-to-Relational-Mapping(ORM)
+
+### Benefits of JPA
+
+- By having a standard API, you are not locked to vendor's implementation
+- Maintain portable, flexible code by coding to JPA spec(interfaces)
+- Can theoretically switch vendor implementations
+
+### Relationship between Hibernate/JPA & JDBC
+
+- Hibernate/JPA uses JDBC for all database communications
+
+### MySQL Database
+
+- MySQL includes two components
+  1. MySQL Database Server
+  2. MySQL Workbench
+- MySQL Database Server : MySQL Database Server is the main engine of the database, supports CRUD features on the data
+- MySQL Workbench : Client GUI for interacting with the database
+
+### creating a new user in MySQL datbase
+
+```mysql
+-- Drop user first if they exist
+DROP USER if exists 'springstudent'@'%' ;
+
+-- Now create user with prop privileges
+CREATE USER 'springstudent'@'%' IDENTIFIED BY 'springstudent';
+
+GRANT ALL PRIVILEGES ON * . * TO 'springstudent'@'%';
+```
+
+### creating student table
+
+```mysql
+CREATE DATABASE  IF NOT EXISTS `student_tracker`;
+USE `student_tracker`;
+
+--
+-- Table structure for table `student`
+--
+
+DROP TABLE IF EXISTS `student`;
+
+CREATE TABLE `student` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `first_name`varchar(45) DEFAULT NULL,
+  `last_name` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+
+```
+
+### Set-up Spring Boot Project
+
+- In Spring Boot Hibernate is the default implementation of JPA
+- EntityManager is main component for creating queries etc...
+- EntityManager is from Jakarta Persistence API(JPA)
+- Based on the config, Spring Boot will automatically create the beans: DataSource, EntityManager, ...
+- You can inject them into your app, for example your DAO.
+
 
 
 
