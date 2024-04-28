@@ -394,8 +394,12 @@ CREATE TABLE `student` (
 - Annotate java class
 - Develop java code to perform database operations
 - @Entity Class - Java class that is mapped to a database table
-- 
 
+### Steps for saving a java obejct using DAO
+
+- Define DAO Interface
+- Define DAO implementation and inject the entity manager
+- Update main app
 
 
 
