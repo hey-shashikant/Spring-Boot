@@ -21,8 +21,19 @@ public class DemoApplication {
         return runner -> {
 //            createMultipleStudent(studentDAO);
 //            readStudent(studentDAO);
-            queryForStudents(studentDAO);
+//            queryForStudents(studentDAO);
+            queryByLastName(studentDAO);
         };
+    }
+
+    private void queryByLastName(StudentDAO studentDAO) {
+        // get a list of students
+        List<Student> students = studentDAO.findByLastName("Solanki");
+
+        // display a list of students
+        for (Student student : students) {
+            System.out.println(student);
+        }
     }
 
     private void queryForStudents(StudentDAO studentDAO) {
