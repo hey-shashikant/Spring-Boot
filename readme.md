@@ -389,7 +389,12 @@ CREATE TABLE `student` (
 - Based on the config, Spring Boot will automatically create the beans: DataSource, EntityManager, ...
 - You can inject them into your app, for example your DAO.
 
+### JPA Development Process
 
+- Annotate java class
+- Develop java code to perform database operations
+- @Entity Class - Java class that is mapped to a database table
+- 
 
 
 
