@@ -401,6 +401,12 @@ CREATE TABLE `student` (
 - Define DAO implementation and inject the entity manager
 - Update main app
 
+### Retriving a Java Object with JPA
+
+- Add new method to DAO interface
+- Add new method to DAO implementation
+- Update main app
+
 
 
 
