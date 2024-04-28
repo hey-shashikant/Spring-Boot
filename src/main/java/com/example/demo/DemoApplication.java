@@ -17,8 +17,22 @@ public class DemoApplication {
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
 
         return runner -> {
-            createStudent(studentDAO);
+            createMultipleStudent(studentDAO);
         };
+    }
+
+    private void createMultipleStudent(StudentDAO studentDAO) {
+
+        // create the student object
+        Student student1 = new Student("Shashikant", "Solanki", "cyborg93033@gmail.com" );
+        Student student2 = new Student("Chirag", "Madan", "chirubhaiya@gmail.com" );
+        Student student3 = new Student("Garv", "Pratap", "garvpratapsingh.gps@gmail.com" );
+
+        // save the student object
+        studentDAO.save(student1);
+        studentDAO.save(student2);
+        studentDAO.save(student3);
+
     }
 
     private void createStudent(StudentDAO studentDAO) {
