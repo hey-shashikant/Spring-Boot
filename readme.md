@@ -407,6 +407,12 @@ CREATE TABLE `student` (
 - Add new method to DAO implementation
 - Update main app
 
+### Updating a Java Object with JPA
+
+- Add new method to DAO interface
+- Add new method to DAO implementation
+- Update main app
+
 
 
 
